@@ -1,0 +1,8 @@
+.items-list{
+    display: flex;
+    gap: 1rem;
+}
+
+.items-list input , button{
+    cursor: pointer;
+}

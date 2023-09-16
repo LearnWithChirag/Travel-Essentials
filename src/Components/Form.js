@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../CSS/Form.css';
 
-const Form = () => {
+const Form = ({onAddItems}) => {
   const [data , setData] = useState("");
+  
 
   function handleSubmit(e){
     e.preventDefault();
@@ -12,6 +13,7 @@ const Form = () => {
     const newItem = { data , packed : false, id: Date.now()};
     console.log(newItem);
 
+    onAddItems(newItem);
     setData("");
 
   }
